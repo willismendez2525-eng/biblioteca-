@@ -1,0 +1,12 @@
+﻿@model BibliotecaMVC.Models.Autor
+
+<h2>Crear Autor</h2>
+
+<form asp-action="CrearAutor" method="post">
+    <div>
+        <label>Nombre:</label>
+        <input asp-for="Nombre" />
+        <span asp-validation-for="Nombre"></span>
+    </div>
+    <button type="submit">Guardar</button>
+</form>

@@ -1,0 +1,18 @@
+﻿@model BibliotecaMVC.Models.Libro
+
+<h2>Crear Libro</h2>
+
+<form asp-action="CrearLibro" method="post">
+    <div>
+        <label>Título:</label>
+        <input asp-for="Titulo" />
+        <span asp-validation-for="Titulo"></span>
+    </div>
+    <div>
+        <label>Autor:</label>
+        <select asp-for="AutorId" asp-items="@(new SelectList(ViewBag.Autores, "AutorId", "Nombre"))">
+            <option value="">--Seleccionar--</option>
+        </select>
+    </div>
+    <button type="submit">Guardar</button>
+</form>
